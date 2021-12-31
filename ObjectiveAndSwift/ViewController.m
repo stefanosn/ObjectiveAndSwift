@@ -6,9 +6,10 @@
 //
 
 #import "ViewController.h"
+#import "ObjectiveAndSwift-Swift.h"
 
 @interface ViewController ()
-
+@property (nonatomic,weak) IBOutlet UITextView *textView;
 @end
 
 @implementation ViewController
@@ -18,5 +19,11 @@
     // Do any additional setup after loading the view.
 }
 
+-(IBAction) getTokenFromSwiftClass
+{
+    ObjectiveAndSwift *signinClass = [ObjectiveAndSwift new];
+    self.textView.text = [signinClass getToken];
+    
+}
 
 @end
