@@ -104,11 +104,7 @@ import FoundationNetworking
                
                 do {
                     let fileData = try NSData(contentsOfFile:paramSrc, options:[]) as Data
-                    
-              
-        //        throws {
-        //      fileData = try NSData(contentsOfFile:paramSrc, options:[]) as Data
-        //        }
+ 
               let fileContent = String(data: fileData, encoding: .utf8)!
               body += "; filename=\"\(paramSrc)\"\r\n"
                 + "Content-Type: \"content-type header\"\r\n\r\n\(fileContent)\r\n"
